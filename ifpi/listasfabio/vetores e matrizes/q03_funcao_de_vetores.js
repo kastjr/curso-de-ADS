@@ -1,4 +1,4 @@
-import {input , print } from '../../../io_utils'
+import {input , print } from '../../../io_utils.js'
 
 function main(){
     const tamanho = Number(input('Diga o tamanho do vetor : '))
