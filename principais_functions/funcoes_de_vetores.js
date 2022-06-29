@@ -76,9 +76,31 @@ function valores_positivos(vetor){
 
 function valores_negativos(vetor){
     let itens_negativos = []
+    let qtd_itens_negativos = 0
     for(i = 0 ; i< vetor.length; i++){
         if(vetor[i] < 0){
-            
+            itens_negativos = add_item_no_vetor(itens_negativos,vetor[i])
+            qtd_itens_negativos++
         } 
     }
+    return(`Existem ${qtd_itens_negativos} itens negativos no vetor e são ${itens_negativos}`)
+}
+
+
+function valores_positivos(vetor){
+    let itens_positivos = []
+    let qtd_itens_positivos = 0
+    for(i = 0 ; i< vetor.length; i++){
+        if(vetor[i] > 0){
+            itens_positivos = add_item_no_vetor(itens_positivos,vetor[i])
+            qtd_itens_positivos++
+        } 
+    }
+    return(`Existem ${qtd_itens_positivos} itens positivos no vetor e são ${itens_positivos}`)
+}
+
+function add_item_no_vetor(vetor2,item){
+    vetor2[vetor2.length] = item
+
+    return (vetor2)
 }
