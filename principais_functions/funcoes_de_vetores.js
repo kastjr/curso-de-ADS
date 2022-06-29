@@ -65,15 +65,6 @@ function soma_dos_valores(vetor){
     return(soma_dos_valores)
 }
 
-function valores_positivos(vetor){
-    let itens_positivos = []
-    for(i = 0 ; i< vetor.length; i++){
-        if(vetor[i] > 0){
-            
-        } 
-    }
-}
-
 function valores_negativos(vetor){
     let itens_negativos = []
     let qtd_itens_negativos = 0
@@ -85,7 +76,6 @@ function valores_negativos(vetor){
     }
     return(`Existem ${qtd_itens_negativos} itens negativos no vetor e são ${itens_negativos}`)
 }
-
 
 function valores_positivos(vetor){
     let itens_positivos = []
