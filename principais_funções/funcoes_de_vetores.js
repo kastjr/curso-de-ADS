@@ -103,3 +103,14 @@ function add_item_no_vetor(vetor2,item){
 
     return (vetor2)
 }
+
+// Criar um vetor a partir de outro vetor (copiar)
+    const dados = Array.from([2, 4, 5])
+
+// Criar um vetor a partir de outro vetor (alterando)
+    const quadrados = Array.from(dados, (vlr, idx) => vlr*2)
+
+
+// Criar um vetor a partir do "nada", e gerar seus valores
+    const numeros = Array.from({length: 5}, (valor, index) => index)
+    
