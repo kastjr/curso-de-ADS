@@ -14,13 +14,13 @@ function main(){
     }
 
     const vetor_c = new Array(2*tamanho)
-    let i = 0
+    let j = 0
     for(let index = 0; index < vetor_c.length; index++){
         if(index < tamanho){
             vetor_c[index] = vetor_a[index]
         }else{
             vetor_c[index] = vetor_b[i]
-            i++
+            j++
         }
     }
     
