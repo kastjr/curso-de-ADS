@@ -1,3 +1,5 @@
+import {input} from '../io_utils.js'
+
 function main(){
     const qtd_candidatos = Number(input('quantos candidatos:'))
     const vetor_candidatos = novo_vetor(qtd_candidatos)
@@ -17,7 +19,7 @@ function main(){
     }
     
     const numero = maior_valor(votos)
-    const segundo_turnoh = 
+    const vai_ter = segundo_turno(qtd_candidatos,votos,numero) 
     console.log('\nRESUMO')
     console.log(`foram entrevistadas ${qtd_votos} pessoas.`)
     
@@ -27,8 +29,8 @@ function main(){
     console.log(`os votos em branco foram ${votos[votos.length - 2]} que equivale a ${porcentagem[porcentagem.length - 2]}% do total.`)
     console.log(`os votos em nulo foram ${votos[votos.length - 1]} que equivale a ${porcentagem[porcentagem.length - 1]}% do total.`)
     console.log(`os votos em nao opinaram foram ${votos[votos.length]} que equivale a ${porcentagem[porcentagem.length]}% do total.`)
-    console.log(`o lider da enquete foi ${vetor_candidatos[numero]}.`
-    console.log(`de acordo com a pesquisa ${} ter segundo turno`)
+    console.log(`o lider da enquete foi ${vetor_candidatos[numero]}.`)
+    console.log(`de acordo com a pesquisa ${vai_ter} ter segundo turno`)
     
 }
 
@@ -50,8 +52,8 @@ function mostrar_menu(vetor_candidatos,qtd_candidatos){
     console.clear()
     let menu = '-----votacao------\n'
     
-    for ( i = 0 ; i < qtd_candidatos ; i++){
-       menu += `i - ${vetor_candidatos[i]} \n`
+    for ( let i = 0 ; i < qtd_candidatos ; i++){
+      console.log (menu += `i - ${vetor_candidatos[i]} \n`)
     }
     menu += `${qtd_candidatos} - BRANCO \n`
     menu += `${qtd_candidatos + 1} - NULO \n`
@@ -79,7 +81,7 @@ function maior_valor(votos){
     return (posicao_do_maior)
 }
 
-function segundo_turno(numero,votos){
+function segundo_turno(numero,votos,qtd_candidatos){
     const maior = votos [numero]
     let contador_maior = 0
     for(i=0 ; i < qtd_candidatos ; i++){
@@ -88,9 +90,10 @@ function segundo_turno(numero,votos){
           }
      if (contador_maior > 1){
           Return ('vai')
-     } else {
+        } else {
           Return ('nao vai')
-     }
+        }
+    }
 }
 
 main()
