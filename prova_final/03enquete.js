@@ -15,6 +15,9 @@ function main(){
     for (i = 0; i < porcentagem.length ; i++){
         porcentagem[i] = votos[i]*100/qtd_votos
     }
+    
+    const numero = maior_valor(votos)
+    const segundo_turnoh = 
     console.log('\nRESUMO')
     console.log(`foram entrevistadas ${qtd_votos} pessoas.`)
     
@@ -24,7 +27,7 @@ function main(){
     console.log(`os votos em branco foram ${votos[votos.length - 2]} que equivale a ${porcentagem[porcentagem.length - 2]}% do total.`)
     console.log(`os votos em nulo foram ${votos[votos.length - 1]} que equivale a ${porcentagem[porcentagem.length - 1]}% do total.`)
     console.log(`os votos em nao opinaram foram ${votos[votos.length]} que equivale a ${porcentagem[porcentagem.length]}% do total.`)
-    console.log(``
+    console.log(`o lider da enquete foi ${vetor_candidatos[numero]}.`
     
 }
 
@@ -59,6 +62,20 @@ function mostrar_menu(vetor_candidatos){
     let  opcao = Number(input(' qual seu voto >>> '))
 
     return opcao
+}
+    
+function maior_valor(votos){
+    let maior = votos[0]
+    let posicao_do_maior = [0]
+
+    for(i = 0;i < vetor.length; i++){
+        if(vetor[i] > maior){
+            maior = vetor[i]
+            posicao_do_maior = [i]
+        }
+    }
+
+    return (posicao_do_maior)
 }
 
 main()
