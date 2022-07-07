@@ -7,19 +7,8 @@ function main(){
 
     while(opcao!=-1){
         qtd_votos++
-        if(opcao === 0){
-            novo_vetor_votos[0] = [0] + 1
-        }else if(opcao === 1){
-                novo_vetor_votos[1] = novo_vetor_votos[1] + 1
-        }else if(opcao === 2){
-            novo_vetor_votos[2] = novo_vetor_votos[2] + 1
-        }else if(opcao === 3){
-            novo_vetor_votos[3] = novo_vetor_votos[3] + 1
-        }else if(opcao === 4){
-            novo_vetor_votos[4] = novo_vetor_votos[4] + 1
-        }else if(opcao === 5){
-            novo_vetor_votos[5] = novo_vetor_votos[5] + 1
-    }
+        let opcao = Number(input('DIGA SEU VOTO:'))
+        votos[opcao]++
     input('<enter> to continue...')
     opcao = mostra_menu()
 
