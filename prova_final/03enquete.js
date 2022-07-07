@@ -4,7 +4,7 @@ function main(){
     const qtd_candidatos = Number(input('quantos candidatos:'))
     const vetor_candidatos = novo_vetor(qtd_candidatos)
     const votos = novo_vetor_zerado(qtd_candidatos+3)
-    mostrar_menu()
+    mostrar_menu(vetor_candidatos,qtd_candidatos)
     let qtd_votos = 0
 
     while(opcao!=-1){
@@ -14,7 +14,7 @@ function main(){
     }
 
     const porcentagem = novo_vetor_zerado(qtd_candidatos+3)
-    for (i = 0; i < porcentagem.length ; i++){
+    for (let i = 0; i < porcentagem.length ; i++){
         porcentagem[i] = votos[i]*100/qtd_votos
     }
     
@@ -53,7 +53,7 @@ function mostrar_menu(vetor_candidatos,qtd_candidatos){
     let menu = '-----votacao------\n'
     
     for ( let i = 0 ; i < qtd_candidatos ; i++){
-      console.log (menu += `i - ${vetor_candidatos[i]} \n`)
+      console.log (menu += 'i - candidato',vetor_candidatos[i],'\n')
     }
     menu += `${qtd_candidatos} - BRANCO \n`
     menu += `${qtd_candidatos + 1} - NULO \n`
