@@ -79,4 +79,18 @@ function maior_valor(votos){
     return (posicao_do_maior)
 }
 
+function segundo_turno(numero,votos){
+    const maior = votos [numero]
+    let contador_maior = 0
+    for(i=0 ; i < qtd_candidatos ; i++){
+         if (votos[i] === maior){
+                contador_maior++
+          }
+     if (contador_maior > 1){
+          Return ('vai')
+     } else {
+          Return ('nao vai')
+     }
+}
+
 main()
