@@ -17,7 +17,10 @@ function main(){
     }
     console.log('\nRESUMO')
     console.log(`foram entrevistadas ${qtd_votos} pessoas.`)
-    console.log(`votos no candidato`)
+    
+    for (let i = 0 ; i < qtd_candidatos ; i++){
+    console.log(`os votos no candidato ${vetor_candidatos[i]} foram ${votos[i]} que equivale a ${porcentagem[i]}% do total.`)
+    }
     console.log(`os votos em branco foram ${votos[votos.length - 2]} que equivale a ${porcentagem[porcentagem.length - 2]}% do total.`)
     console.log(`os votos em nulo foram ${votos[votos.length - 1]} que equivale a ${porcentagem[porcentagem.length - 1]}% do total.`)
     console.log(`os votos em nao opinaram foram ${votos[votos.length]} que equivale a ${porcentagem[porcentagem.length]}% do total.`)
@@ -42,17 +45,18 @@ function novo_vetor_zerado(tamanho){
 function mostrar_menu(vetor_candidatos){
     console.clear()
     let menu = '-----votacao------\n'
-    menu += `0 - ${vetor_candidatos[0]} \n`
-    menu += `1 - ${vetor_candidatos[1]} \n`
-    menu += `2 - ${vetor_candidatos[2]} \n`
-    menu += `3 - BRANCO \n`
-    menu += `4 - NULO \n`
-    menu += `5 - NAO OPINARAM \n`
+    
+    for ( i = 0 ; i < qtd_candidatos ; i++){
+       menu += `i - ${vetor_candidatos[i]} \n`
+    }
+    menu += `${qtd_candidatos} - BRANCO \n`
+    menu += `${qtd_candidatos + 1} - NULO \n`
+    menu += `${qtd_candidatos + 2} - NAO OPINARAM \n`
     
     menu += '\n -1 - SAIR\n'
 
     console.log(menu)
-    let  opcao = Number(input('>>> '))
+    let  opcao = Number(input(' qual seu voto >>> '))
 
     return opcao
 }
