@@ -28,6 +28,7 @@ function main(){
     console.log(`os votos em nulo foram ${votos[votos.length - 1]} que equivale a ${porcentagem[porcentagem.length - 1]}% do total.`)
     console.log(`os votos em nao opinaram foram ${votos[votos.length]} que equivale a ${porcentagem[porcentagem.length]}% do total.`)
     console.log(`o lider da enquete foi ${vetor_candidatos[numero]}.`
+    console.log(`de acordo com a pesquisa ${} ter segundo turno`)
     
 }
 
@@ -45,7 +46,7 @@ function novo_vetor_zerado(tamanho){
     }
 }
 
-function mostrar_menu(vetor_candidatos){
+function mostrar_menu(vetor_candidatos,qtd_candidatos){
     console.clear()
     let menu = '-----votacao------\n'
     
