@@ -1,7 +1,7 @@
 function main(){
     const qtd_candidatos = Number(input('quantos candidatos:'))
     const vetor_candidatos = novo_vetor(qtd_candidatos)
-    const votos = novo_vetor_votos(qtd_candidatos+3)
+    const votos = novo_vetor_zerado(qtd_candidatos+3)
     mostrar_menu()
     let qtd_votos = 0
 
@@ -9,16 +9,20 @@ function main(){
         qtd_votos++
         let opcao = Number(input('DIGA SEU VOTO:'))
         votos[opcao]++
-    input('<enter> to continue...')
-    opcao = mostra_menu()
-
     }
-    console.clear()
 
-    const porcentagem = 
-
-    console.log('RESUMO')
-
+    const porcentagem = novo_vetor_zerado(qtd_candidatos+3)
+    for (i = 0; i < porcentagem.length ; i++){
+        porcentagem[i] = votos[i]*100/qtd_votos
+    }
+    console.log('\nRESUMO')
+    console.log(`foram entrevistadas ${qtd_votos} pessoas.`)
+    console.log(`votos no candidato`)
+    console.log(`os votos em branco foram ${votos[votos.length - 2]} que equivale a ${porcentagem[porcentagem.length - 2]}% do total.`)
+    console.log(`os votos em nulo foram ${votos[votos.length - 1]} que equivale a ${porcentagem[porcentagem.length - 1]}% do total.`)
+    console.log(`os votos em nao opinaram foram ${votos[votos.length]} que equivale a ${porcentagem[porcentagem.length]}% do total.`)
+    console.log(``
+    
 }
 
 function novo_vetor(tamanho){
@@ -28,7 +32,7 @@ function novo_vetor(tamanho){
     }
 }
 
-function novo_vetor_votos(tamanho){
+function novo_vetor_zerado(tamanho){
     const vetor = new Array(tamanho)
     for(let i = 0; i < vetor.length ; i++){
         vetor[i] = 0 
