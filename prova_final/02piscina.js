@@ -30,7 +30,7 @@ function main(){
 }
 
 
-function custo(capacidade_recomendada,preco_da_agua){
+function custo(capacidade_recomendada,preco_da_agua){ //DESCOBRIR O CUSTO DE MANUTENÇAO
     const recomendado = capacidade_recomendada/1000
     let litros_excedentes = recomendado - Math.trunc(recomendado)
     let litros_a_pagar = Math.trunc(recomendado)
