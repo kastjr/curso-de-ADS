@@ -15,7 +15,7 @@ f. Reprovados por falta.*/
 import fs from 'fs'
 
 function main(){
-    const dados_de_alunos = fs.readFileSync('./alunos.txt','utf-8').split('\n')
+    const dados_de_alunos = fs.readFileSync('./alunos.txt','utf-8').split('\n')//LER O ARQUIVO
 
     let media_do_aluno = 0
     let soma_das_medias = 0
